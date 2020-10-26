@@ -17,10 +17,10 @@ import { RepliesService } from '../replies.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private nav : NavgivationServiceService,private latestTopic : TopicsService, private Allreplies : RepliesService) { }
-  private topics = [];
-  private Londontecreplies = [];
-  private akeelReplies = [];
+  constructor(public nav: NavgivationServiceService, public latestTopic: TopicsService, public Allreplies: RepliesService) { }
+  public topics = [];
+  public Londontecreplies = [];
+  public akeelReplies = [];
 
   ngOnInit() {
     this.nav.showLogin();
