@@ -1,13 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-body">
-      <b>Reply List</b> <br/><br/> 
-      
-      <div class="panel panel-default" *ngFor="let topic of topics">
+      <b>Reply List</b> <br/><br/>
+
+      <!-- <div class="panel panel-default" *ngFor="let topic of topics">
           <div class="panel-body">
               {{topicTitle}}
           </div>
-      </div>
-  
+      </div> -->
+
       <!-- LATEST TOPIC LIST -->
       <form class="navbar-form navbar" role="search" #form="ngForm" (ngSubmit)="passVal(form)">
       <div class="panel panel-default" *ngFor="let reply of replies">
@@ -17,7 +17,7 @@
 
               <i> {{ reply.replyContent }} </i><br/>
               <div><a [routerLink]="['/Profile',reply.startedBy]"> {{ reply.startedBy }} </a>
-               {{ reply.startedDate }} 
+               {{ reply.startedDate }}
               </div>
           </div>
       </div>

@@ -16,7 +16,7 @@ import { NavgivationServiceService } from '../navgivation-service.service';
 })
 export class NavigationMenuComponent implements OnInit {
 
-  constructor(private navCondition : NavgivationServiceService) { }
+  constructor(public navCondition: NavgivationServiceService) { }
 
   ngOnInit() {
 

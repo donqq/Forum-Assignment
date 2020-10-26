@@ -16,7 +16,7 @@ import { NavgivationServiceService } from '../navgivation-service.service';
 })
 export class ReplyPageComponent implements OnInit {
 
-  constructor(private nav : NavgivationServiceService) { }
+  constructor(public nav: NavgivationServiceService) { }
 
   ngOnInit() {
     this.nav.showLogin();

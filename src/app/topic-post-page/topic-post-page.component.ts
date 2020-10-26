@@ -16,26 +16,24 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./topic-post-page.component.css']
 })
 export class TopicPostPageComponent implements OnInit {
-  errorMessage = "none";
-  sucessMessage = "none"
+  public errorMessage = 'none';
+  public sucessMessage = 'none';
 
-  constructor(private nav : NavgivationServiceService) { }
+  constructor(public nav: NavgivationServiceService) { }
 
   ngOnInit() {
     this.nav.showLogin();
   }
 
-  passVal($f : NgForm){
-    console.log($f.value)
-    if(!$f.value.topicname || !$f.value.topiccontent)
-    {
-      this.errorMessage = "block";
-      this.sucessMessage = "none";
+  passVal($f: NgForm) {
+    console.log($f.value);
+    if (!$f.value.topicname || !$f.value.topiccontent) {
+      this.errorMessage = 'block';
+      this.sucessMessage = 'none';
     }
-    if($f.value.topicname && $f.value.topiccontent)
-    {
-      this.errorMessage = "none";
-      this.sucessMessage = "block";
+    if ($f.value.topicname && $f.value.topiccontent) {
+      this.errorMessage = 'none';
+      this.sucessMessage = 'block';
     }
   }
 

@@ -12,8 +12,7 @@ export class TopicsService {
 
   constructor() { }
 
-  topics()
-  {
+  public topics() {
     return [
       {topicName: 'Londontec Trip 2 2018', startedBy: 'Akeel', startedDate : '2018/03/21'},
       {topicName: 'Londontec Social Network Links', startedBy: 'Akeel', startedDate : '2018/03/20'},
@@ -28,8 +27,7 @@ export class TopicsService {
     ];
   }
 
-  dashboard()
-  {
+  public dashboard() {
     return [
       {topicName: 'Londontec Trip 2 2018', startedBy: 'Akeel', startedDate : '2018/03/21'},
       {topicName: 'Londontec Social Network Links', startedBy: 'Akeel', startedDate : '2018/03/20'},

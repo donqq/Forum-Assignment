@@ -18,57 +18,55 @@ import {NgForm} from '@angular/forms';
 })
 export class SignupPageComponent implements OnInit {
 
-  private allCourses = []
-  errorMessage = "none";
-  sucessMessage = "none"
-  private dropdownList = [];
-  private selectedItems = [];
-  private dropdownSettings = {};
+  public allCourses = []
+  public errorMessage = 'none';
+  public sucessMessage = 'none';
+  public dropdownList = [];
+  public selectedItems = [];
+  public dropdownSettings = {};
 
-  constructor(private nav : NavgivationServiceService, private course : CoursesService) { }
+  constructor(public nav: NavgivationServiceService, public course: CoursesService) { }
 
   ngOnInit() {
     this.nav.shownonLogin();
 
-    //*******//*******//*******//*******//*******//*******//*******
-        this.dropdownList = this.course.courses()
+    // *******//*******//*******//*******//*******//*******//*******
+        this.dropdownList = this.course.courses();
         this.dropdownSettings = {
                   singleSelection: false,
-                  text:"All Courses",
-                  selectAllText:'Select All',
-                  unSelectAllText:'UnSelect All',
+                  text: 'All Courses',
+                  selectAllText: 'Select All',
+                  unSelectAllText: 'UnSelect All',
                   enableSearchFilter: false,
-                  classes:"myclass custom-class"
+                  classes: 'myclass custom-class'
                 };
         }
 
-        onItemSelect(item:any){
+        onItemSelect(item: any) {
         console.log(item);
         console.log(this.selectedItems);
         }
-        OnItemDeSelect(item:any){
+        OnItemDeSelect(item: any) {
         console.log(item);
         console.log(this.selectedItems);
         }
-        onSelectAll(items: any){
+        onSelectAll(items: any) {
         console.log(items);
         }
-        onDeSelectAll(items: any){
+        onDeSelectAll(items: any) {
         console.log(items);
         }
-    /***///*******//*******//*******//*******//*******//*******
+    // ***///*******//*******//*******//*******//*******//*******
 
-  passVal($f : NgForm){
-    console.log($f.value)
-    if($f.value.password != $f.value.confirmpassword)
-    {
-      this.errorMessage = "block";
-      this.sucessMessage = "none";
+  passVal($f: NgForm){
+    console.log($f.value);
+    if ($f.value.password !== $f.value.confirmpassword) {
+      this.errorMessage = 'block';
+      this.sucessMessage = 'none';
     }
-    if($f.value.password == $f.value.confirmpassword)
-    {
-      this.errorMessage = "none";
-      this.sucessMessage = "block";
+    if ($f.value.password === $f.value.confirmpassword) {
+      this.errorMessage = 'none';
+      this.sucessMessage = 'block';
     }
   }
 }

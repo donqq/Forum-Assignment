@@ -30,7 +30,7 @@ import { NavgivationServiceService } from './navgivation-service.service';
 import { CoursesService } from './courses.service';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RepliesService } from './replies.service';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 
@@ -73,7 +73,7 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2
       {path : '**', component: NotFoundComponent}
     ])
   ],
-  providers: [TopicsService,NavgivationServiceService,CoursesService,RepliesService],
+  providers: [TopicsService, NavgivationServiceService, CoursesService, RepliesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

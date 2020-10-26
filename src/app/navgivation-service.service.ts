@@ -10,9 +10,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class NavgivationServiceService {
-  dashboard
-  topics
-  sign;
+  dashboard: boolean;
+  topics: boolean;
+  sign: boolean;
 
   constructor() {
     this.dashboard = false;
@@ -20,13 +20,13 @@ export class NavgivationServiceService {
     this.sign = true;
   }
 
-  showLogin(){
+  showLogin() {
     this.dashboard = true;
     this.topics = true;
     this.sign = false;
   }
 
-  shownonLogin(){
+  shownonLogin() {
     this.dashboard = false;
     this.topics = false;
     this.sign = true;

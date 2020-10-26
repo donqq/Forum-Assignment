@@ -13,8 +13,7 @@ export class RepliesService {
 
   constructor() { }
 
-  sampleCommon()
-  {
+  public sampleCommon() {
     return [
       {replyContent: 'I am going too', startedBy: 'Kavidu', startedDate : '2018/01/02', id: 'One'},
       {replyContent: 'I am not going, will see in the next time', startedBy: 'Sitara', startedDate : '2018/01/02', id: 'Two'},
@@ -24,8 +23,7 @@ export class RepliesService {
     ];
   }
 
-  Akeel()
-  {
+  public Akeel() {
     return [
       {replyContent: 'Thanks guys for reply', startedBy: 'Akeel', startedDate : '2018/01/03', id: 'Six'},
     ];

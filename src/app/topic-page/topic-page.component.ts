@@ -16,16 +16,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TopicPageComponent implements OnInit {
 
-  private topicTitle;
+  public topicTitle: any;
 
-  constructor(private nav : NavgivationServiceService,private parameters : ActivatedRoute) { }
+  constructor(public nav: NavgivationServiceService, public parameters: ActivatedRoute) { }
 
   ngOnInit() {
     this.nav.showLogin();
     this.parameters.paramMap.subscribe(parameters => {
       console.log(parameters);
-      this.topicTitle = parameters.get("id");
-    })
+      this.topicTitle = parameters.get('id');
+    });
   }
 
 

@@ -15,33 +15,31 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./userprofile.component.css']
 })
 export class UserprofileComponent implements OnInit {
-  profileName
-  sucessMessage = "none"
-  errorMessage = "none"
-  Myself = false;
+  public profileName: any;
+  public sucessMessage = 'none';
+  public errorMessage = 'none';
+  public Myself = false;
 
-  constructor(private nav : NavgivationServiceService,private parameters : ActivatedRoute) { }
+  constructor(public nav: NavgivationServiceService, public parameters: ActivatedRoute) { }
 
   ngOnInit() {
     this.nav.showLogin();
     this.parameters.paramMap.subscribe(parameters => {
       console.log(parameters);
-      if(parameters.get("id") != null)
-      {
-        this.profileName = "This is " + parameters.get("id") + "'s Profile";
-      }
-      else{
+      if (parameters.get('id') !== null) {
+        this.profileName = 'This is ' + parameters.get('id') + '\'s Profile';
+      } else {
         this.Myself = true;
-        this.profileName = "This is My Profile";
+        this.profileName = 'This is My Profile';
       }
-    })
+    });
   }
 
-  userban(){
-    if(this.Myself == true){
-      this.errorMessage = "block";
-    }else{
-      this.sucessMessage = "block";
+  public userban() {
+    if (this.Myself === true){
+      this.errorMessage = 'block';
+    } else {
+      this.sucessMessage = 'block';
     }
   }
 

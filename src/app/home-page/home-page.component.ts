@@ -16,9 +16,9 @@ import { NavgivationServiceService } from '../navgivation-service.service';
 })
 export class HomePageComponent implements OnInit {
 
-  private topics = [];
+  topics = [];
 
-  constructor(private latestTopic : TopicsService, private nav : NavgivationServiceService) { }
+  constructor(private latestTopic: TopicsService, private nav: NavgivationServiceService) { }
 
   ngOnInit() {
     this.topics = this.latestTopic.topics();

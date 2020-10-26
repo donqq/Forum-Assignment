@@ -17,9 +17,9 @@ import { TopicsService } from '../topics.service';
 })
 export class TopicListComponent implements OnInit {
 
-  private topics = [];
+  public topics = [];
 
-  constructor(private nav : NavgivationServiceService,private latestTopic : TopicsService) { }
+  constructor(public nav: NavgivationServiceService, public latestTopic: TopicsService) { }
 
   ngOnInit() {
     this.nav.showLogin();

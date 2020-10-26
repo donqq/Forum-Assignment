@@ -9,7 +9,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavgivationServiceService } from '../navgivation-service.service';
 import { ActivatedRoute } from '@angular/router';
-import {RepliesService} from "../replies.service";
+import {RepliesService} from '../replies.service';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -19,31 +19,31 @@ import {NgForm} from '@angular/forms';
 })
 export class ReplyListComponent implements OnInit {
 
-  private topicTitle;
-  private replies;
-  errorMessage = "none";
-  sucessMessage = "none"
+  public topicTitle: any;
+  public replies: any;
+  errorMessage = 'none';
+  sucessMessage = 'none';
 
 
-  constructor(private nav : NavgivationServiceService,private parameters : ActivatedRoute, private allReplies : RepliesService) { }
+  constructor(public nav: NavgivationServiceService, public parameters: ActivatedRoute, public allReplies: RepliesService) { }
 
   ngOnInit() {
     this.nav.showLogin();
     this.parameters.paramMap.subscribe(parameters => {
       console.log(parameters);
-      this.topicTitle = parameters.get("id");
+      this.topicTitle = parameters.get('id');
       this.replies = this.allReplies.sampleCommon();
     })
   }
 
-  passVal($f : NgForm){
-    console.log($f.value)
-    if($f.value.One || $f.value.Two || $f.value.Three  || $f.value.Four || $f.value.Five ){
-      this.errorMessage = "none";
-      this.sucessMessage = "block"
-    }else{
-      this.errorMessage = "block";
-      this.sucessMessage = "none"
+  passVal($f: NgForm) {
+    console.log($f.value);
+    if ($f.value.One || $f.value.Two || $f.value.Three  || $f.value.Four || $f.value.Five ) {
+      this.errorMessage = 'none';
+      this.sucessMessage = 'block';
+    }else {
+      this.errorMessage = 'block';
+      this.sucessMessage = 'none';
     }
   }
 
