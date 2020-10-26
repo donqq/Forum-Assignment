@@ -1,0 +1,41 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <b>Reply List</b> <br/><br/> 
+      
+      <div class="panel panel-default" *ngFor="let topic of topics">
+          <div class="panel-body">
+              {{topicTitle}}
+          </div>
+      </div>
+  
+      <!-- LATEST TOPIC LIST -->
+      <form class="navbar-form navbar" role="search" #form="ngForm" (ngSubmit)="passVal(form)">
+      <div class="panel panel-default" *ngFor="let reply of replies">
+          <div class="panel-body">
+
+              <input type="checkbox" ngModel required [name]="reply.id" [checked]="false">
+
+              <i> {{ reply.replyContent }} </i><br/>
+              <div><a [routerLink]="['/Profile',reply.startedBy]"> {{ reply.startedBy }} </a>
+               {{ reply.startedDate }} 
+              </div>
+          </div>
+      </div>
+
+      <b>Administrator Actions</b><br/><br/>
+      <button type="submit" class="btn btn-primary">
+          Delete Selected Replies
+       </button>
+      </form>
+       <div class="alert alert-success" role="alert" [style.display]="sucessMessage">Selected reply(ies) were removed</div>
+       <div class="alert alert-danger" role="alert" [style.display]="errorMessage">You have to select at least one reply to delete</div>
+      <!-- LATEST TOPIC LIST //-->
+    </div>
+  </div>
+  <!--
+  {replyContent: "I am going too", startedBy: "Kavidu", startedDate : "2018/01/02"},
+      {replyContent: "I am not going, will see in the next time", startedBy: "Sitara", startedDate : "2018/01/02"},
+      {replyContent: "hopefully I can go", startedBy: "Navoda", startedDate : "2018/01/03"},
+      {replyContent: "Thanks guys for reply", startedBy: "Akeel", startedDate : "2018/01/03"},
+      {replyContent: "No problem", startedBy: "Kavidu", startedDate : "2018/01/03"}
+  -->

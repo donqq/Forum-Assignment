@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <b>Create a New Topic Page</b> <br/><br/>  
+      
+      <!-- A NEW TOPIC PAGE -->
+
+      <table border='0'>
+      <form class="navbar-form navbar" role="search" #form="ngForm" (ngSubmit)="passVal(form)">
+        <tr>
+          <td>
+          <div class="input-group">
+              <input size='100' type="text" class="form-control" placeholder="Topic Name" aria-describedby="basic-addon1" ngModel required name="topicname">
+          </div></td>
+        </tr> 
+        <tr><td>
+          <div class="form-group">
+              <textarea cols='102' class="form-control" rows="5" placeholder="Topic Content" id="address" ngModel required  name="topiccontent"></textarea>
+          </div></td>
+        </tr> 
+        <tr><td>
+      <button type="submit" class="btn btn-primary">
+          Submit
+      </button></td>
+    </tr>
+    </form>
+  </table>
+    <div class="alert alert-success" role="alert" [style.display]="sucessMessage">Success</div>
+    <div class="alert alert-danger" role="alert" [style.display]="errorMessage">You need to enter both topic name and the content to submit.!</div>
+      <!-- A NEW TOPIC PAGE //-->
+    </div>
+</div>

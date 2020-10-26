@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <b>Create a New Reply</b> <br/><br/>  
+      <!-- REPLY //-->
+
+      <form class="navbar-form navbar" role="search" #form="ngForm" (ngSubmit)="passVal(form)">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="replyBody" ngModel required  name="replyBody" cols="102"></textarea>
+                  </div>
+            </div>
+          </div> 
+
+          <button type="submit" class="btn btn-primary">
+              Submit 
+            </button>    
+      </form> 
+      <div class="alert alert-success" role="alert" [style.display]="sucessMessage">The reply was successfully made</div>
+      <div class="alert alert-danger" role="alert" [style.display]="errorMessage">Reply content is empty. Please Type something and resubmit again.</div>
+      <!-- REPLY //-->
+    </div>
+  </div>
