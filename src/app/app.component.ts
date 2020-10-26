@@ -4,6 +4,7 @@
  * bld@nucuta.com, bld@dilanga.com
  * License - https://raw.githubusercontent.com/donqq/Forum-Assignment/main/LICENSE
  */
+// CHANGES
 
 import { Component } from '@angular/core';
 import * as $ from 'jquery';
