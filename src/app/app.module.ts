@@ -1,3 +1,11 @@
+
+/*
+ * Forum Software (Front End Validation Only) - 1.0 by @donqq (Badde Liyanage Don Dilanga) - https://nucuta.com, https://dilanga.com
+ * bld@nucuta.com, bld@dilanga.com
+ * License - https://raw.githubusercontent.com/donqq/Forum-Assignment/main/LICENSE
+ */
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -62,7 +70,7 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2
       {path : 'Topics-New', component: TopicPostPageComponent},
       {path : 'Reply-New', component: ReplyPostPageComponent},
       {path : 'Replies/:id', component: ReplyListComponent},
-      {path : '**', component: NotFoundComponent} 
+      {path : '**', component: NotFoundComponent}
     ])
   ],
   providers: [TopicsService,NavgivationServiceService,CoursesService,RepliesService],
