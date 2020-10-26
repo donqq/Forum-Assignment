@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <b>Dashboard</b> <br/><br/>  
+  
+      <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#topics">Topics</a></li>
+          <li><a data-toggle="tab" href="#answers">Answers</a></li>
+        </ul>
+      
+        <div class="tab-content">
+          <div id="topics" class="tab-pane fade in active">
+
+              <div class="panel panel-default" *ngFor="let topic of topics">
+                  <div class="panel-body">
+                      <a [routerLink]="['/Topics',topic.topicName]"> <b> {{ topic.topicName }} </b></a><br/>
+                      <div><a [routerLink]="['/Profile',topic.startedBy]"> {{ topic.startedBy }} </a>
+                       {{ topic.startedDate }} </div>
+                  </div>
+              </div>
+
+          </div>
+          <div id="answers" class="tab-pane fade">
+
+              <div class="panel panel-default" *ngFor="let reply of akeelReplies">
+                  <div class="panel-body">
+                      <b> {{ reply.replyContent }} </b><br/>
+                      <div> {{ reply.startedBy }}
+                       {{ reply.startedDate }} </div>
+                  </div>
+              </div>
+
+          </div>
+        </div>
+      
+  </div>

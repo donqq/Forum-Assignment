@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <b>Latest Topics</b> <br/><br/>  
+
+    <!-- LATEST TOPIC LIST -->
+    <div class="panel panel-default" *ngFor="let topic of topics">
+        <div class="panel-body">
+            <a [routerLink]="['/Topics',topic.topicName]"> <b> {{ topic.topicName }} </b></a><br/>
+            <div><a [routerLink]="['/Profile',topic.startedBy]"> {{ topic.startedBy }} </a>
+             {{ topic.startedDate }} </div>
+        </div>
+    </div>
+    <!-- LATEST TOPIC LIST //-->
+  </div>
+</div>

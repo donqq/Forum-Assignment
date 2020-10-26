@@ -1,0 +1,8 @@
+<div class="alert alert-info" role="alert">{{ profileName }}</div>
+<br/>
+Administrator Actions<br/>
+<button type="button" class="btn btn-primary" (click)="userban()">
+        Ban User
+ </button>
+ <div class="alert alert-success" role="alert" [style.display]="sucessMessage">User is banned</div>
+ <div class="alert alert-danger" role="alert" [style.display]="errorMessage">You can't ban yourself.!</div>
