@@ -1,4 +1,5 @@
-# Forum Software v1.0
+# Student Forum UI
+Student Forum UI is an User Interface developed in Angular with the capability to validate user inputs in the client side.
 
-This Angular application is used to validate user information. Use ng serve to run it after pulling from github.
+
 
