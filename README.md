@@ -49,7 +49,7 @@ Simple non code license (SNCL)
   
 
 # Screenshots
-<img src='screenshots/brave_6MAzrdNEdG.png' width='25%'><img src='screenshots/brave_HBuALFIRfR.png' width='25%'><img src='screenshots/brave_iekfPKLts3.png' width='25%'><img src='screenshots/brave_LH1fgJX1hJ.png' width='25%'><img src='screenshots/brave_q9M2zJ5UJL.png' width='25%'><img src='screenshots/brave_QOlRvs08Ok.png' width='25%'><img src='screenshots/brave_RE4qFfjeRn.png' width='25%'><img src='screenshots/brave_w1BnpQtrHp.png' width='25%'><img src='screenshots/brave_zgPDqR0IwJ.png' width='25%'>
+<img src='screenshots/brave_6MAzrdNEdG.png' width='25%'> <img src='screenshots/brave_HBuALFIRfR.png' width='25%'> <img src='screenshots/brave_iekfPKLts3.png' width='25%'> <img src='screenshots/brave_LH1fgJX1hJ.png' width='25%'> <img src='screenshots/brave_q9M2zJ5UJL.png' width='25%'><img src='screenshots/brave_QOlRvs08Ok.png' width='25%'> <img src='screenshots/brave_RE4qFfjeRn.png' width='25%'> <img src='screenshots/brave_w1BnpQtrHp.png' width='25%'> <img src='screenshots/brave_zgPDqR0IwJ.png' width='25%'>
 
 # Demo
 https://donqq.github.io/Student-Forum-UI/
